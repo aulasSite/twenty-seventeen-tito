@@ -11,4 +11,17 @@
  Tags:
  Text Domain:  twentyseventeen-child
 */
-/*estilos para a página page-verde*/
+
+ page{
+   perspective: 1px;
+   background-color: red;
+ }
+ /*
+ .custom-header-media{
+
+   transform: translateZ(-1px);
+ }
+ .site-content-contain {
+   transform: translateZ(0);
+
+ }*/
