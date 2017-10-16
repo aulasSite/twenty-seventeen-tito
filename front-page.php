@@ -14,12 +14,6 @@
  *		**************************************************************************
  *		**************************************************************************
  *
- *
- *
- *
- *
- *
- *
  * If the user has selected a static page for their homepage, this is what will
  * appear.
  * Learn more: https://codex.wordpress.org/Template_Hierarchy
