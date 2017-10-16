@@ -1,0 +1,26 @@
+1) wireframe- (esqueleto)
+			-elementos
+					-mapa
+							-jogador(es)
+							-zumbis
+							-cenário
+					-cabeçalho
+					-pontuação
+			-posição
+			-usabilidade
+					-teclas de setas, wasd, ?bomba?
+		
+2) layout - desenhar a pagina do site
+				-cores
+						-tema escuro
+				-formas
+				-botoes
+						-reiniciar
+
+3) desenvolvimento - 
+				-algoritmos
+						-mover personagens (cima, baixo, esq, dir, diagonais)
+						-mover zumbis
+						-atrair o zumbi para o jogador
+				-ferramentas
+				

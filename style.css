@@ -12,16 +12,29 @@
  Text Domain:  twentyseventeen-child
 */
 
- page{
-   perspective: 1px;
-   background-color: red;
- }
- /*
- .custom-header-media{
-
-   transform: translateZ(-1px);
- }
- .site-content-contain {
-   transform: translateZ(0);
-
- }*/
+#contaForm{
+			display:inline;
+			border:solid 0.1px rgb(100,100,100);
+}
+#formSequencia{
+	background-color:red;
+}
+#advice{
+      	position:absolute;
+      	top:1vw;
+      	left:27vw;
+      	color:red;
+      	visibility:hidden;
+      	background-color:rgba(100,100,30,0.8);
+      	border-radius:20px;
+      	padding:0.5vw;
+      	font-size:0.8em;
+      	border:0.09vw solid #076C07;
+      	font-weight:strong;
+		z-index:10;
+}
+/*
+#formPA{
+	background-color:
+	
+}*/

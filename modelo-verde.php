@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Contato
+Template Name: verdeCripto
 */
 ?>
 <?php
@@ -86,14 +86,16 @@ Template Name: Contato
           }
         }
       }
-      ?>
-
+ ?>
+<div class="wrap">
+	<div id="primary" class="content-area">
+		<main id="main" class="site-main" role="main">
+			<link href="https://fonts.googleapis.com/css?family=Cutive+Mono|VT323" rel="stylesheet">
       		<link href="https://fonts.googleapis.com/css?family=Cutive+Mono|VT323" rel="stylesheet">
-      		<link href="https://fonts.googleapis.com/css?family=Cutive+Mono|VT323" rel="stylesheet">
-          <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 
       		<h1>Criptografia</h1>
-          <section>
+			<section>
         		<form action="" method="POST">
         			<p id="senha">senha:</p>
         			<input type="password" pattern="[0-9]{1,1000}"class="quad_senha"name="senha"><br>
@@ -104,7 +106,7 @@ Template Name: Contato
         			<input class="button"type="submit"name="option"value="descriptografar"><br>
         		</form>
             <p class="ex"><?php echo($resposta);?></p>
-      	<script>
+			<script>
       		String.prototype.replaceAt=function(index, replacement) {
       			return this.substr(0, index) + replacement+ this.substr(index + replacement.length);
       			}
@@ -175,7 +177,8 @@ Template Name: Contato
 
       			})
       	</script>
-      </html>
-      <?php
-get_footer( );
- ?>
+      </main><!-- #main -->
+	</div><!-- #primary -->
+</div><!-- .wrap -->
+
+<?php get_footer();?>
