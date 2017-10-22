@@ -24,49 +24,46 @@
 				$elemento = eval("return ($elemento);");
 				array_push ($array , $elemento);
 			}
-			
-			if(count($array)==1){
+			$contagem = count($array);
+			if($contagem < 2){
 				$resposta = "Não é uma progressão aritmética";
-			}
-			elseif(count($array)==2){
-				$resposta = $array[1] - $array[0];
-				if(strpos($resposta, "-")===FALSE){
-						$resposta="+".$resposta;
-						$contagem=	count($array)-1;
-						while($contagem < 23){
-							$contas = $array[$contagem] . $resposta;
-							$sequencia = eval("return ($contas);");
-							array_push ($array , $sequencia);
-							$contagem++;
-							}
-						$texto = implode(" , " , $array);	
-					}
-					$resposta = "Regra: <br>".$resposta;
 			}
 			else{
 				$formula = $array[1] - $array[0];
-				if($array[1] + $formula == $array[2]){
-					$resposta = $formula;
-					if(strpos($resposta, "-")===FALSE){
-						$resposta="+".$resposta;
-						$contagem=	count($array)-1;
-						while($contagem < 23){
-							$contas = $array[$contagem] . $resposta;
-							$sequencia = eval("return ($contas);");
-							array_push ($array , $sequencia);
-							$contagem++;
+				$contador = 0;
+				$erro = false;
+				while( $contador < $contagem){
+					if($contador > 0){
+						if($array[$contador] - $array[$contador - 1] == $formula){
+							
 						}
-						$texto = implode(" , " , $array);	
-					$resposta = "Regra: <br>".$resposta;
+						else{
+							$erro = true;
+						}
 					}
+					$contador++;
+				}
+				if($erro === false){
+					$resposta = $formula;
+					if(strpos($resposta, "-")===FALSE){					//completa a resposta com + se for positiva
+						$resposta="+".$resposta;
+					}				
+					$contagem--;
+					while($contagem < 23){										//completa a sequencia até atingir 24
+						$contas = $array[$contagem] . $resposta;
+						$sequencia = eval("return ($contas);");
+						array_push ($array , $sequencia);
+						$contagem++;
+					}
+					$texto = implode(" , " , $array);	
 				}
 				else{
 					$resposta = "Não é uma progressão aritmética";
 				}
-			}	
+			}
 		}
 	}
-	$resposta=$texto."<br>".$resposta;
+	$resposta=$texto."<br>".$resposta;	
  ?>
 
 <div class="wrap">
